@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário com FullCalendar e ICS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
+
+
+    <!-- If you use the default popups, use this. -->
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+    <script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="calendar"></div>
+
+
+
+    <script type="module">
+
+        import { gerar_calendario_full_calendar } from './scripts/fullCalendar.js'
+
+        import { gerar_calendario_tui_calendar } from './scripts/tuiCalendar.js'
+
+
+        document.addEventListener('DOMContentLoaded', async () => {
+
+
+
+            gerar_calendario_full_calendar();
+
+
+            /*
+                await gerar_calendario_tui_calendar();
+            */
+
+        });
+
+    </script>
+
+</body>
+
+</html>
